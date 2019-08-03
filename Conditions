@@ -1,0 +1,11 @@
+movie_year = 2002
+if(movie_year>2002){
+  print('Movie year is greater than 2000')
+}else {
+  print('Movie year is not greater than 2000')
+}
+
+#Combining logical statements
+
+'India'=='India' & 1999 != 1999 #and operator with !=
+‘toy story'=='toy story' | 19995 <= 1990 #or operator with <=
