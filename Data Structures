@@ -1,0 +1,62 @@
+#Arrays and Matrices
+
+movie_vector <- c(“akira”, “toy story”, “room”, “wildfire”, “wave”, “wonderland”, “ring”, “wars”, “knight”, “jumanji”)
+movie_array <- array(movie_vector, dim = c(4,3))   #dim -> (rows,column)
+movie_array[1,2] #accessing (like matrices)
+#Unlike array, a matrix must be 2-dimensional
+movie_matrix <- matrix(movie_vector, nrow = 3, ncol = 3, byrow = TRUE)
+#matrix is arranged in columns by default
+
+#Lists
+
+movie <- list(“toy story”, 1995, c(“Animation”, “Adventure”, “Comedy”))
+movie[2:3]
+
+#Named List
+
+movie <- list( name = “toy story”, year = 1995, genre = c(“Animation”, “Adventure”, “Comedy”))
+movie$genre
+
+#Adding items
+movie[“age”] <- 5 #new element is added at the end
+
+#Remove item
+movie[“age”] <- NULL
+
+#Data Frames
+
+#A data frame is a type of structure that contains correlated information.
+
+movies <- data.frame( name = c(“Breakfast Club”, “American Beauty”,  “Black Swan”, “Chicago”),
+    year = <- c(1985, 1990, 2010, 2002) )
+
+#access variables using $ symbol
+movies$name
+
+#access by specifying column
+movies[1]
+
+#access by specifying individual elements
+movies[1,2]  #[row , col]
+
+#getting info about structure of data frame
+str(movies)
+
+#head and tail
+head(movies) #shows first 6 elements of data frame
+tail(movies) #shows last 6 elements of data frame
+
+#Inserting a new column
+#Specify the new column’s name & assign it to a vector
+movies[ “length” ] <- c(81, 140, 135, 119)
+
+#Inserting a new row
+movies <- rbind(movies, c(name = “Dr. who”, year = 1964, length = 120) )
+
+#Similarly as an alternate, use cbind() to add a new column
+
+#Deleting a row
+movies <- movies[-9,]
+
+#Deleting a column
+movies[“length”] <- NULL
