@@ -1,0 +1,21 @@
+#Length of a Vector
+
+Year <- c(1985, 1990, 2010, 2002)
+length(Year)
+
+#Naming elements of a vector
+
+Year <- c(1985, 1990, 2010, 2002)
+names(Year) <- c(“Breakfast Club”, “American Beauty”,  “Black Swan”, “Chicago”)
+Year[“Black Swan”]
+
+#Ordered Factor
+
+movie_length <- c(“Very short”, “Short”, “Medium”, “Short”, “Long”, “Very short”, “Very long”)
+movie_length_factor <- factor(movie_length, 
+                                                ordered = TRUE,
+                                levels = c(“Very short”, “Short”, “Medium”, “Long”, “Very long”))
+                                
+#Sort a Vector
+
+year_sorted <- sort(Year)
